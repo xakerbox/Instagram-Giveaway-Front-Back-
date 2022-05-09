@@ -1,11 +1,12 @@
 // SubTask 2.1
 function getFiles(path = 'C:\\Users\\Slava\\Desktop\\files2\\'){     // receives the path to the dir / folder with files
-    let fs = require('fs')
+    //==> У меня Mac, у тебя Windows, пути будут разные. Юзай path - разберись как работает.
+    let fs = require('fs') //==> Вот это нужно объявлять один раз в начале файлы. Вызвал нужный модуль и дальше его юзаешь.
     let files = fs.readdirSync(path)
     return files
 }
 
-function uniqueValues(path = 'C:\\Users\\Slava\\Desktop\\files2\\'){     // receives the path to dir with files
+function uniqueValues(path = 'C:\\Users\\Slava\\Desktop\\files2\\'){    //==>подобные комменты можно убрать // receives the path to dir with files
     let s = new Set()
     const fs = require('fs')
     const dir = path
@@ -84,3 +85,5 @@ function existInAllFiles(path = 'C:\\Users\\Slava\\Desktop\\files2\\') {     // 
 console.log(uniqueValues())
 console.log(existInAllFiles())
 console.log(existInAtLeastTen())
+
+//==> Напиши, какие результаты у каждого вывода. 
