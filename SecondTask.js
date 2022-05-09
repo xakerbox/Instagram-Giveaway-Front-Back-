@@ -1,15 +1,22 @@
 // SubTask 2.1
+const fs = require('fs')
+
 function getFiles(path = 'C:\\Users\\Slava\\Desktop\\files2\\'){     // receives the path to the dir / folder with files
-    let fs = require('fs')
     let files = fs.readdirSync(path)
     return files
 }
 
 function uniqueValues(path = 'C:\\Users\\Slava\\Desktop\\files2\\'){     // receives the path to dir with files
-    let s = new Set()
-    const fs = require('fs')
-    const dir = path
-    let allFiles = getFiles(path)
+    let s = new Set(...array)
+    s.size();
+   
+    [['d', 'b', 't'], ['n', 'a', 'e']]
+    Spread-оператор
+    ...['']
+    
+    
+    const dir = path;
+    let allFiles = getFiles(path);
     for(let j in allFiles) {
         let file = allFiles[j]
         let absolutePath = path+file
@@ -24,10 +31,9 @@ function uniqueValues(path = 'C:\\Users\\Slava\\Desktop\\files2\\'){     // rece
 
 // SubTask 2.2
 function existInAtLeastTen(path = 'C:\\Users\\Slava\\Desktop\\files2\\') {     // receives the path to dir with files
-    let dict = new Object()
-    const fs = require('fs')
-    const dir = path
-    let allFiles = getFiles(path)
+    let dict = new Object();
+    const dir = path;
+    let allFiles = getFiles(path);
     for (let j in allFiles) {
         let s = new Set()
         let file = allFiles[j]
@@ -48,14 +54,26 @@ function existInAtLeastTen(path = 'C:\\Users\\Slava\\Desktop\\files2\\') {     /
             amountOfThePhrases += 1
         }
     }
-    return  'Словосочетаний, которые есть, как минимум, в десяти файлах: ' + amountOfThePhrases
+    return 'Словосочетаний, которые есть, как минимум, в десяти файлах: ' + amountOfThePhrases;
+    `Словосочетаний, которые есть, как минимум, в десяти файлах: ${amountOfThePhrases}`
+    
+    for (let i = 0; i < 20; i++) {
+    const txt = fs.readFileSync(`./out${i}.txt`, 'utf-8');
+    
+    }
 }
 
 // SubTask 2.3
-function existInAllFiles(path = 'C:\\Users\\Slava\\Desktop\\files2\\') {     // receives the path to dir with files
-    let dict = new Object()
-    const fs = require("fs")
-    const dir = path
+const path = __dirname;
+
+const existInAllFiles = () => {
+    
+}
+
+function existInAllFiles(path) {     // receives the path to dir with files
+    let dict = new Object()         
+    const path = require('path');
+   const dir = path
     let allFiles = getFiles(path)
     for (let j in allFiles) {
         let s = new Set()
